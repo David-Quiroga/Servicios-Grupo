@@ -20,6 +20,7 @@ getOne(id: ProductModel['id']):Observable<ProductModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.get<ProductModel>(url);
 }
+//store
 store(product: CreateProductDto):Observable<ProductModel> {
     const url = `${this.API_URL}`; 
     return this.httpClient.post<ProductModel>(url, product)
